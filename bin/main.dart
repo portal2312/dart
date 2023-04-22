@@ -1,6 +1,7 @@
 void main() {
-  late final String one;
-  // print(one);  // Error: The late local variable 'one' is definitely unassigned at this point.
-  one = 'one';
-  print(one);
+  const one = 'one'; // Is compile-time constant.
+  // two = '2';  // Error: does not change.
+  // var api = unknownAPI();  // ok.
+  // late api = fetchAPI();  // ok.
+  // const api = fetchAPI();  // Error: Is not compile-time constant.
 }

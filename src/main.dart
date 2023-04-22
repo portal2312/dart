@@ -1,5 +1,5 @@
 void main() {
-  String? one = 'one';
-  one = null;
-  print(one?.isNotEmpty);
+  final one = 'one';
+  final String? two = 'two';
+  // one = null;  // Error: does not change.
 }

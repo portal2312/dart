@@ -30,7 +30,7 @@ list[1] = 1;
 assert(list[1] == 1);
 ```
 
-컴파일 시간 상수인 목록을 만들려면 목록 리터럴 앞에 const를 추가합니다:
+_compile-time constant_ 인 _list_ 을 만들려면 _list literal_ 앞에 `const` 를 추가합니다:
 
 ```dart
 var constantList = const [1, 2, 3];
@@ -40,6 +40,58 @@ var constantList = const [1, 2, 3];
 For more information about lists, refer to the Lists section of the [Library tour](https://dart.dev/guides/libraries/library-tour#lists).
 
 ## Sets
+
+Dart의 _set_ 은 고유 항목의 정렬되지 않은 모음입니다. _set_ 에 대한 Dart 지원은 _set literal_ 및 [Set](https://api.dart.dev/stable/dart-core/Set-class.html) 유형에 의해 제공됩니다. 다음은 _set literal_ 을 사용하여 만든 간단한 Dart _set_ 입니다:
+
+```dart
+var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+```
+
+> [!NOTE]
+> Dart는 `halogens` 을 `Set<String>` 유형이라고 추론합니다. _Set_ 에 잘못된 유형의 값을 추가하려고 하면 분석기 또는 런타임에서 오류가 발생합니다. 자세한 내용은 [type inference](https://dart.dev/language/type-system#type-inference)에 대해 읽어보세요.
+
+빈 _set_ 을 만들려면 `{}` 앞에 유형 인수를 사용하거나 `{}`를 _Set_ 유형의 변수에 할당합니다:
+
+```dart
+var names = <String>{};
+// Set<String> names = {}; // This works, too.
+// var names = {}; // Creates a map, not a set.
+```
+
+> [!NOTE] _Set_ 또는 _Map_?
+> _map literal_ 의 구문은 _set literal_ 의 구문과 유사합니다. _map literal_ 이 먼저 나왔기 때문에 `{}` 는 기본적으로 _map_ 유형입니다. `{}` 의 유형 주석이나 할당된 변수를 잊은 경우 Dart는 `Map<dynamic, dynamic>` 유형의 객체를 생성합니다.
+
+`add()` 또는 `addAll()` _method_ 를 사용하여 기존 _set_ 에 항목을 추가합니다:
+
+```dart
+var elements = <String>{};
+elements.add('fluorine');
+elements.addAll(halogens);
+```
+
+`.length` 를 사용하여 _set_ 의 항목 수를 가져옵니다:
+
+```dart
+var elements = <String>{};
+elements.add('fluorine');
+elements.addAll(halogens);
+assert(elements.length == 5);
+```
+
+_compile-time constant_ 인 _set_ 을 만들려면 _set literal_ 앞에 `const` 를 추가합니다:
+
+```dart
+final constantSet = const {
+  'fluorine',
+  'chlorine',
+  'bromine',
+  'iodine',
+  'astatine',
+};
+// constantSet.add('helium'); // This line will cause an error.
+```
+
+For more information about sets, refer to the Sets section of the [Library tour](https://dart.dev/guides/libraries/library-tour#sets).
 
 ## Maps
 

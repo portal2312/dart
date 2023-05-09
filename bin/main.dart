@@ -1,10 +1,10 @@
 void main() {
-  var oldFriends = ['A', 'B'];
-  var newFriends = [
-    for (var friend in oldFriends) "😀 $friend",
-    'C',
-    'D',
-    'E',
-  ];
-  print(newFriends);
+  var player = {
+    'name': 'A',
+    'xp': 19.99,
+    'superuser': false,
+  };
+  List<Map<String, Object>> players = [];
+  players.add(player);
+  print(players);
 }

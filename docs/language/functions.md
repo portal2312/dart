@@ -1,6 +1,12 @@
 # [Functions](https://dart.dev/language/functions)
 
-Dart는 진정한 객체 지향 언어이므로 함수도 객체이며 유형이 [Function](https://api.dart.dev/stable/dart-core/Function-class.html) 입니다. 이는 함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있음을 의미합니다. 마치 함수인 것처럼 Dart 클래스의 인스턴스를 호출할 수도 있습니다. 자세한 내용은 [callable classes](https://dart.dev/language/callable-classes)를 참조하십시오.
+Dart는 진정한 객체 지향 언어이므로 함수도 객체이며 유형이 [Function](https://api.dart.dev/stable/dart-core/Function-class.html) 입니다. 이는 함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있음을 의미합니다. 마치 함수인 것처럼 Dart _class_ 의 _instance_ 를 호출할 수도 있습니다. 자세한 내용은 [callable classes](https://dart.dev/language/callable-classes)를 참조하십시오.
+
+## Parameters
+
+### Named parameters
+
+### Optional positional parameters
 
 ## The main() function
 
@@ -28,3 +34,17 @@ void main(List<String> arguments) {
 ```
 
 [args](https://pub.dev/packages/args) library 를 사용하여 명령줄 인수를 정의하고 구문 분석 할 수 있습니다.
+
+## Functions as first-class objects
+
+## Anonymous functions
+
+## Lexical scope
+
+## Lexical closures
+
+## Testing functions for equality
+
+## Return values
+
+## Generators

@@ -1,30 +1,18 @@
+void echo(String message) {
+  print(message);
+}
+
+String sayHello(String name) {
+  var message = "Hello $name nice to meet you!";
+  // print(message);
+  return message;
+}
+
+// This is good example for fat arrow function:
+num plus(num a, num b) => a + b;
+
 void main() {
-  var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
-  print(halogens);
-  var names = <String>{};
-  print(names);
-  Set<String> names2 = {}; // This works, too.
-  print(names2);
-  var names3 = {}; // Creates a map, not a set.
-  if (names3 is Set) {
-    print('Is Set.');
-  } else if (names3 is Map) {
-    print('Is Map.');
-  } else {
-    print('Is Unknown.');
-  }
-  var elements = <String>{};
-  elements.add('fluorine');
-  elements.addAll(halogens);
-  print(elements);
-  assert(elements.length == 5);
-  final constantSet = const {
-    'fluorine',
-    'chlorine',
-    'bromine',
-    'iodine',
-    'astatine',
-  };
-  // constantSet.add('helium'); // This line will cause an error.
-  print(constantSet);
+  echo('Oh!');
+  print(sayHello('everyone'));
+  print(plus(1, 2));
 }

@@ -1,6 +1,13 @@
-String sayHello(String name, int age, [String? country = 'korea']) =>
-    'Hello, $name, you are $age years old from $country.';
+String capitalizeName(String? name) => name?.toLowerCase() ?? 'anonymous';
 
 void main() {
-  print(sayHello('anonymous', 30));
+  print(capitalizeName('june'));
+  print(capitalizeName(null));
+
+  String? name;
+  name ??= 'jake';
+  name ??= 'june'; // Does not working.
+  name = null;
+  name ??= 'sam';
+  print(name);
 }

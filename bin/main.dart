@@ -1,13 +1,9 @@
-String capitalizeName(String? name) => name?.toLowerCase() ?? 'anonymous';
+typedef ListInt = List<int>;
+
+ListInt reverseListOfNumber(ListInt data) {
+  return data.reversed.toList();
+}
 
 void main() {
-  print(capitalizeName('june'));
-  print(capitalizeName(null));
-
-  String? name;
-  name ??= 'jake';
-  name ??= 'june'; // Does not working.
-  name = null;
-  name ??= 'sam';
-  print(name);
+  print(reverseListOfNumber([1, 2, 3]));
 }

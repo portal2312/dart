@@ -1,9 +1,14 @@
-typedef ListInt = List<int>;
+class Player {
+  final String name = 'player-1';
+  int xp = 1500;
 
-ListInt reverseListOfNumber(ListInt data) {
-  return data.reversed.toList();
+  void sayHello() {
+    print('Hi, my name is $name.');
+  }
 }
 
 void main() {
-  print(reverseListOfNumber([1, 2, 3]));
+  var player = Player();
+  // player.name = 'a';  // Does not working.
+  player.sayHello();
 }

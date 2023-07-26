@@ -1,6 +1,10 @@
+abstract class Human {
+  void work();
+}
+
 enum Team { red, blue }
 
-class Player {
+class Player extends Human {
   String name;
   int xp;
   Team team;
@@ -11,8 +15,20 @@ class Player {
     required this.team,
   });
 
+  // MUST be defined.
+  void work() {
+    print('The player is working.');
+  }
+
   void sayHello() {
     print('Hi, my name is $name.');
+  }
+}
+
+class Coach extends Human {
+  // MUST be defined.
+  void work() {
+    print('The coach is working.');
   }
 }
 
